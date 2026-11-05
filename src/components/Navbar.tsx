@@ -30,13 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
           ? isDark
             ? 'bg-[#080808]/90 border-b border-white/10 backdrop-blur-md py-4'
             : 'bg-[#F5F3EE]/90 border-b border-black/10 backdrop-blur-md py-4'
           : 'bg-transparent py-6'
-      }`}
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Brand Logo & Monogram (Transparent, Resized) */}
@@ -49,9 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
             />
           </div>
           <div className="flex items-center gap-2">
-            <span className={`font-display font-bold tracking-[0.2em] text-sm group-hover:text-[#E8753D] transition-colors ${
-              isDark ? 'text-[#F5F3EE]' : 'text-[#080808]'
-            }`}>
+            <span className={`font-display font-bold tracking-[0.2em] text-sm group-hover:text-[#E8753D] transition-colors ${isDark ? 'text-[#F5F3EE]' : 'text-[#080808]'
+              }`}>
               AVIF
             </span>
             <span className="text-[9px] font-mono tracking-widest text-[#E8753D] uppercase font-bold">
@@ -66,11 +64,10 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
             <a
               key={link.href}
               href={link.href}
-              className={`text-xs font-mono uppercase tracking-wider transition-colors relative py-1 group ${
-                isDark
+              className={`text-xs font-mono uppercase tracking-wider transition-colors relative py-1 group ${isDark
                   ? 'text-[#A7A39D] hover:text-[#F5F3EE]'
                   : 'text-[#555555] hover:text-[#080808]'
-              }`}
+                }`}
             >
               <span className="group-hover:text-[#E8753D] transition-colors">
                 {link.label}
@@ -86,11 +83,10 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
           <button
             onClick={onToggleTheme}
             title={isDark ? 'Switch to White Theme' : 'Switch to Black Theme'}
-            className={`p-2 rounded-full border transition-all duration-300 flex items-center justify-center group ${
-              isDark
+            className={`p-2 rounded-full border transition-all duration-300 flex items-center justify-center group ${isDark
                 ? 'border-white/15 bg-white/5 text-[#F5F3EE] hover:border-[#E8753D] hover:text-[#E8753D]'
                 : 'border-black/15 bg-black/5 text-[#080808] hover:border-[#E8753D] hover:text-[#E8753D]'
-            }`}
+              }`}
           >
             {isDark ? (
               <Sun className="w-4 h-4 text-[#E8753D] transition-transform duration-300 group-hover:rotate-45" />
@@ -101,12 +97,11 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
 
           {/* Quick Email Pill */}
           <a
-            href="mailto:hello@avifdigital.com"
-            className={`hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-mono border transition-all duration-300 group ${
-              isDark
+            href="mailto:avifdigital.com"
+            className={`hidden sm:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-mono border transition-all duration-300 group ${isDark
                 ? 'border-white/15 text-[#F5F3EE] hover:border-[#E8753D] hover:text-[#E8753D] hover:bg-[#E8753D]/5'
                 : 'border-black/15 text-[#080808] hover:border-[#E8753D] hover:text-[#E8753D] hover:bg-[#E8753D]/5'
-            }`}
+              }`}
           >
             <span>avifdigital.com</span>
             <ArrowUpRight className="w-3 h-3 text-[#E8753D] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -115,9 +110,8 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`md:hidden p-2 rounded-lg ${
-              isDark ? 'text-[#A7A39D] hover:text-white' : 'text-[#555555] hover:text-black'
-            }`}
+            className={`md:hidden p-2 rounded-lg ${isDark ? 'text-[#A7A39D] hover:text-white' : 'text-[#555555] hover:text-black'
+              }`}
           >
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -126,11 +120,10 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme }) => {
 
       {/* Mobile Drawer */}
       {mobileOpen && (
-        <div className={`md:hidden border-b px-6 py-6 transition-all duration-300 ${
-          isDark
+        <div className={`md:hidden border-b px-6 py-6 transition-all duration-300 ${isDark
             ? 'bg-[#080808] border-white/10 text-[#F5F3EE]'
             : 'bg-[#F5F3EE] border-black/10 text-[#080808]'
-        }`}>
+          }`}>
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
