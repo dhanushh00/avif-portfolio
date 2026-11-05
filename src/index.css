@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #080808;
+    --bg-charcoal: #171717;
+    --text-offwhite: #F5F3EE;
+    --accent-orange: #E8753D;
+    --text-warmgrey: #A7A39D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #080808;
+    color: #F5F3EE;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Subtle architectural grid lines */
+.clean-grid-bg {
+  background-image: 
+    linear-gradient(rgba(245, 243, 238, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 243, 238, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Clean Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8753D;
+}
+
+/* Smooth Interactive Word Hover */
+.hover-word {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.hover-word:hover {
+  transform: translateY(-2px);
+  color: #E8753D;
+}
